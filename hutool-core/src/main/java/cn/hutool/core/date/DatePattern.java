@@ -29,6 +29,32 @@ public class DatePattern {
 
 	//-------------------------------------------------------------------------------------------------------------------------------- Normal
 	/**
+	 * 年月格式：yyyy-MM
+	 */
+	public static final String NORM_MONTH_PATTERN = "yyyy-MM";
+	/**
+	 * 年月格式 {@link FastDateFormat}：yyyy-MM
+	 */
+	public static final FastDateFormat NORM_MONTH_FORMAT = FastDateFormat.getInstance(NORM_MONTH_PATTERN);
+	/**
+	 * 年月格式 {@link FastDateFormat}：yyyy-MM
+	 */
+	public static final DateTimeFormatter NORM_MONTH_FORMATTER = DateTimeFormatter.ofPattern(NORM_MONTH_PATTERN);
+
+	/**
+	 * 简单年月格式：yyyyMM
+	 */
+	public static final String SIMPLE_MONTH_PATTERN = "yyyyMM";
+	/**
+	 * 简单年月格式 {@link FastDateFormat}：yyyyMM
+	 */
+	public static final FastDateFormat SIMPLE_MONTH_FORMAT = FastDateFormat.getInstance(SIMPLE_MONTH_PATTERN);
+	/**
+	 * 简单年月格式 {@link FastDateFormat}：yyyyMM
+	 */
+	public static final DateTimeFormatter SIMPLE_MONTH_FORMATTER = DateTimeFormatter.ofPattern(SIMPLE_MONTH_PATTERN);
+
+	/**
 	 * 标准日期格式：yyyy-MM-dd
 	 */
 	public static final String NORM_DATE_PATTERN = "yyyy-MM-dd";
@@ -173,6 +199,15 @@ public class DatePattern {
 	 * UTC时间{@link FastDateFormat}：yyyy-MM-dd'T'HH:mm:ss
 	 */
 	public static final FastDateFormat UTC_SIMPLE_FORMAT = FastDateFormat.getInstance(UTC_SIMPLE_PATTERN, TimeZone.getTimeZone("UTC"));
+
+	/**
+	 * UTC时间：yyyy-MM-dd'T'HH:mm:ss.SSS
+	 */
+	public static final String UTC_SIMPLE_MS_PATTERN = "yyyy-MM-dd'T'HH:mm:ss.SSS";
+	/**
+	 * UTC时间{@link FastDateFormat}：yyyy-MM-dd'T'HH:mm:ss.SSS
+	 */
+	public static final FastDateFormat UTC_SIMPLE_MS_FORMAT = FastDateFormat.getInstance(UTC_SIMPLE_MS_PATTERN, TimeZone.getTimeZone("UTC"));
 
 	/**
 	 * UTC时间：yyyy-MM-dd'T'HH:mm:ss'Z'
